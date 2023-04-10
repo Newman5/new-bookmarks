@@ -1,4 +1,6 @@
-# New Bookmarks
+# New Bookmarks aka Recent Bookmarks
+
+Available in the Mozilla addons directory - https://addons.mozilla.org/en-US/firefox/addon/recent-bookmarks/
 
 ## What it does
 

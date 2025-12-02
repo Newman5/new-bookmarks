@@ -1,6 +1,6 @@
 {
   "name": "recent-bookmarks",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "description": "A modern browser extension to track, organize, and reflect on your recent bookmarks",
   "main": "background.js",
   "scripts": {

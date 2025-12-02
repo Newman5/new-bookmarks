@@ -107,28 +107,13 @@ Supporters participate in a profit-sharing/community reward system:
 - Charitable donations
 - Community meetups or events
 
-#### Revenue Math (Realistic Target)
+#### Revenue Math for $20K/year Target
 
-**Goal:** 500 total active users, with 80 supporters (16% support rate)
+**Challenge:** Reaching $20K/year with only 500 users requires high supporter engagement.
 
-**Annual Revenue:**
-- 80 supporters × $20/year = $1,600/year
-- Additional donations/tips: ~$400/year (estimated)
-- **Total: ~$2,000/year**
-
-Wait, that's only $2K not $20K. Let me recalculate for $20K target:
-
-**Revised Goal:** 500 active users, with 200 supporters (40% support rate)
-
-**Annual Revenue:**
-- 200 supporters × $20/year = $4,000/year
-- Still short of $20K...
-
-**Alternative Path to $20K with 500 users:**
-- Need $20,000 ÷ 500 users = $40/user average
-- At 40% support rate: $20,000 ÷ 200 supporters = $100/year per supporter
-
-**Adjusted Pricing Tiers:**
+**Analysis:**
+- $20,000 ÷ 500 users = $40 average per user
+- With tiered pricing, need significant participation
 
 **Supporter Tiers (choose what fits your budget):**
 - 🥉 **Friend** - $20/year (support development)
@@ -136,26 +121,28 @@ Wait, that's only $2K not $20K. Let me recalculate for $20K target:
 - 🥇 **Champion** - $100/year (champion of the project)
 - 💎 **Lifetime** - $200 one-time (lifetime supporter)
 
-**Revenue Projection with 500 users:**
-- 100 Friends @ $20 = $2,000
-- 60 Patrons @ $50 = $3,000
-- 30 Champions @ $100 = $3,000
-- 20 Lifetime (year 1 only) = $4,000
-- Tips and extras = $1,000
-- **Year 1 Total: ~$13,000**
-- **Year 2+ Total: ~$9,000** (no lifetime sales)
-
-**To reach $20K/year sustainably:**
+**Path to $20K/year (requires 330 supporters from 500 users):**
 - 150 Friends @ $20 = $3,000
 - 100 Patrons @ $50 = $5,000
 - 50 Champions @ $100 = $5,000
 - 30 Lifetime/year = $6,000
-- Tips = $1,000
+- Tips and extras = $1,000
 - **Total: $20,000/year**
 
-This requires **330 paying supporters out of 500 users = 66% support rate**
+**Support Rate Required: 66% (330 supporters / 500 users)**
 
-**That's ambitious but possible for a truly valuable, community-focused tool.**
+**Reality Check:** This 66% conversion rate is extremely ambitious. Industry standards for donation/supporter models are typically 1-5%. However, it may be achievable if:
+- The tool provides exceptional value
+- Community is highly engaged and loyal
+- Users feel genuine ownership
+- Alternative monetization is avoided (no ads, no data selling)
+
+**More Realistic Projections:**
+- **Year 1:** 200-250 supporters (40-50% rate) = $8K-13K
+- **Year 2:** 300-350 supporters (60-70% rate) = $15K-20K  
+- **Year 3:** Sustained 330+ supporters = $20K+ goal achieved
+
+**Success depends on building genuine community value, not just a user base.**
 
 - Keeps everything free
 - Builds community

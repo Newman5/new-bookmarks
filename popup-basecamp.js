@@ -1,5 +1,5 @@
-//I'm sure I can do this with GitHub, but I'm not sure how to do it yet. 
-//This is a 'basecamp' version of the popup.js file. I can use this to come back if something goes wrong. 
+//I'm sure I can do this with GitHub, but I'm not sure how to do it yet.
+//This is a 'basecamp' version of the popup.js file. I can use this to come back if something goes wrong.
 
 const ONE_WEEK = 7 * 24 * 60 * 60 * 1000; // one week in milliseconds
 const startDate = new Date(Date.now() - ONE_WEEK); // one week ago, by substracting one week from the current date
@@ -8,8 +8,8 @@ const startDate = new Date(Date.now() - ONE_WEEK); // one week ago, by substract
 browser.bookmarks.getRecent(25).then((bookmarkItems) => {
   // Filter the bookmarks to only get the ones that were added in the last week
   //The filter method returns an array of all the items with dateAdded greater than or equal to the start date.
-  const recentBookmarks = bookmarkItems.filter(item => item.dateAdded >= startDate.getTime());
-  
+  const recentBookmarks = bookmarkItems.filter((item) => item.dateAdded >= startDate.getTime());
+
   // Get the bookmarks list element
   const bookmarksList = document.getElementById('bookmarks-list');
 
@@ -33,5 +33,3 @@ browser.bookmarks.getRecent(25).then((bookmarkItems) => {
     bookmarksList.appendChild(li);
   });
 });
-
-

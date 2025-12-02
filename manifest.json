@@ -16,17 +16,14 @@
     }
   ],
 
-  "permissions": [
-    "bookmarks"
-  ],
+  "permissions": ["bookmarks"],
 
   "browser_action": {
-"default_icon": "icons/star-filled-38.png",
-  "default_popup": "popup.html"
+    "default_icon": "icons/star-filled-38.png",
+    "default_popup": "popup.html"
   },
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }

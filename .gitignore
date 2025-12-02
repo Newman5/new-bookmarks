@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+web-ext-artifacts/
+*.zip
+
+# Development
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+.cache/
+
+# Temporary files
+/tmp/
+*.bak
+*~
+
+# OS files
+Thumbs.db
+desktop.ini

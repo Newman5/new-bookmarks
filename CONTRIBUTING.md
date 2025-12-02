@@ -5,7 +5,9 @@ Thank you for your interest in contributing! This document provides guidelines a
 ## 🌟 Ways to Contribute
 
 ### 1. Report Bugs
+
 Found a bug? Please create an issue with:
+
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
@@ -13,19 +15,23 @@ Found a bug? Please create an issue with:
 - Screenshots if applicable
 
 ### 2. Suggest Features
+
 Have an idea? Open an issue with:
+
 - Clear description of the feature
 - Why it would be useful
 - How it might work
 - Any examples or mockups
 
 ### 3. Improve Documentation
+
 - Fix typos or unclear explanations
 - Add examples or tutorials
 - Translate documentation
 - Improve code comments
 
 ### 4. Submit Code
+
 - Fix bugs
 - Implement features
 - Improve performance
@@ -35,6 +41,7 @@ Have an idea? Open an issue with:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ and npm 9+
 - Git
 - Firefox or Chrome for testing
@@ -43,17 +50,20 @@ Have an idea? Open an issue with:
 ### Development Setup
 
 1. **Fork and Clone**
+
 ```bash
 git clone https://github.com/YOUR-USERNAME/new-bookmarks.git
 cd new-bookmarks
 ```
 
 2. **Install Dependencies**
+
 ```bash
 npm install
 ```
 
 3. **Create a Branch**
+
 ```bash
 git checkout -b feature/your-feature-name
 # or
@@ -61,12 +71,14 @@ git checkout -b fix/bug-description
 ```
 
 4. **Make Your Changes**
+
 - Write clean, readable code
 - Follow the existing code style
 - Add comments for complex logic
 - Update documentation if needed
 
 5. **Test Your Changes**
+
 ```bash
 # Run linter
 npm run lint
@@ -84,6 +96,7 @@ npm run start:chrome
 ```
 
 6. **Commit Your Changes**
+
 ```bash
 git add .
 git commit -m "feat: add search functionality"
@@ -92,6 +105,7 @@ git commit -m "fix: resolve popup loading issue"
 ```
 
 Use conventional commits:
+
 - `feat:` - New feature
 - `fix:` - Bug fix
 - `docs:` - Documentation changes
@@ -101,6 +115,7 @@ Use conventional commits:
 - `chore:` - Build process or tool changes
 
 7. **Push and Create PR**
+
 ```bash
 git push origin feature/your-feature-name
 ```
@@ -110,6 +125,7 @@ Then create a Pull Request on GitHub.
 ## 📋 Code Style Guidelines
 
 ### JavaScript
+
 - Use ES6+ features (const, let, arrow functions, etc.)
 - No `var` declarations
 - Use single quotes for strings
@@ -119,6 +135,7 @@ Then create a Pull Request on GitHub.
 - Keep functions small and focused
 
 ### Example
+
 ```javascript
 // Good
 const getRecentBookmarks = async (limit = 100) => {
@@ -127,18 +144,20 @@ const getRecentBookmarks = async (limit = 100) => {
 };
 
 // Avoid
-var get_bookmarks = function(l) {
-  return browser.bookmarks.getRecent(l)
-}
+var get_bookmarks = function (l) {
+  return browser.bookmarks.getRecent(l);
+};
 ```
 
 ### HTML
+
 - Semantic HTML5 elements
 - Proper indentation (2 spaces)
 - Accessible markup (ARIA labels, alt text)
 - Descriptive IDs and classes
 
 ### CSS
+
 - Mobile-first approach
 - BEM naming convention (optional but encouraged)
 - Organize by component
@@ -146,6 +165,7 @@ var get_bookmarks = function(l) {
 - Keep specificity low
 
 ### Comments
+
 - Explain "why" not "what"
 - Document complex algorithms
 - Add JSDoc for functions
@@ -154,6 +174,7 @@ var get_bookmarks = function(l) {
 ## 🧪 Testing
 
 ### Manual Testing
+
 - Test on Firefox, Chrome, and Edge
 - Test both light and dark modes
 - Test with various bookmark counts (0, 10, 100, 1000+)
@@ -163,6 +184,7 @@ var get_bookmarks = function(l) {
 - Verify performance
 
 ### Browser Testing Checklist
+
 - [ ] Extension loads without errors
 - [ ] Popup displays correctly
 - [ ] Search works as expected
@@ -176,6 +198,7 @@ var get_bookmarks = function(l) {
 ## 📝 Pull Request Guidelines
 
 ### Before Submitting
+
 - [ ] Code follows style guidelines
 - [ ] Linting passes (`npm run lint`)
 - [ ] Code is formatted (`npm run format`)
@@ -185,7 +208,9 @@ var get_bookmarks = function(l) {
 - [ ] No console.log() left in code (unless intentional)
 
 ### PR Description
+
 Include:
+
 - What changes were made
 - Why the changes were needed
 - How to test the changes
@@ -193,11 +218,14 @@ Include:
 - Related issue numbers (fixes #123)
 
 ### PR Template
+
 ```markdown
 ## Description
+
 Brief description of changes
 
 ## Type of Change
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation update
@@ -205,20 +233,24 @@ Brief description of changes
 - [ ] Code refactoring
 
 ## Testing
+
 - [ ] Tested on Firefox
 - [ ] Tested on Chrome
 - [ ] Tested on Edge
 
 ## Screenshots
+
 (if applicable)
 
 ## Related Issues
+
 Fixes #(issue number)
 ```
 
 ## 🎯 Priority Areas for Contribution
 
 ### High Priority
+
 1. Manifest V3 migration
 2. Cross-browser compatibility
 3. Modern UI/UX improvements
@@ -226,6 +258,7 @@ Fixes #(issue number)
 5. Bug fixes
 
 ### Medium Priority
+
 1. Advanced search features
 2. Export functionality
 3. Statistics and analytics
@@ -233,6 +266,7 @@ Fixes #(issue number)
 5. Accessibility improvements
 
 ### Future Features
+
 1. Cloud sync
 2. AI-powered categorization
 3. Team collaboration
@@ -247,6 +281,7 @@ Good bug reports include:
 Clear description of the problem
 
 **Steps to Reproduce**
+
 1. Go to '...'
 2. Click on '...'
 3. See error
@@ -258,6 +293,7 @@ What should happen
 What actually happens
 
 **Environment**
+
 - Browser: Firefox 122
 - OS: macOS 14.2
 - Extension Version: 0.2
@@ -312,16 +348,19 @@ recent-bookmarks/
 ## 📚 Resources
 
 ### Learning
+
 - [MDN WebExtensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions)
 - [Chrome Extensions Docs](https://developer.chrome.com/docs/extensions/)
 - [Browser Extension Workshop](https://extensionworkshop.com/)
 
 ### Tools
+
 - [web-ext](https://github.com/mozilla/web-ext) - Testing and packaging
 - [ESLint](https://eslint.org/) - Code linting
 - [Prettier](https://prettier.io/) - Code formatting
 
 ### Community
+
 - [GitHub Discussions](https://github.com/Newman5/new-bookmarks/discussions)
 - [GitHub Issues](https://github.com/Newman5/new-bookmarks/issues)
 
@@ -343,6 +382,7 @@ recent-bookmarks/
 ## 🎉 Recognition
 
 Contributors will be:
+
 - Listed in CONTRIBUTORS.md
 - Mentioned in release notes
 - Credited in documentation

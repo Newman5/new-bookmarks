@@ -6,7 +6,7 @@ module.exports = {
   },
   extends: 'eslint:recommended',
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 2023,
     sourceType: 'module',
   },
   rules: {
@@ -14,9 +14,9 @@ module.exports = {
     'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     'prefer-const': 'warn',
     'no-var': 'error',
-    'semi': ['error', 'always'],
-    'quotes': ['error', 'single', { avoidEscape: true }],
-    'indent': ['error', 2],
+    semi: ['error', 'always'],
+    quotes: ['error', 'single', { avoidEscape: true }],
+    indent: ['error', 2],
     'comma-dangle': ['error', 'always-multiline'],
   },
   globals: {

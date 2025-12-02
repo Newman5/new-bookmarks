@@ -9,9 +9,11 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 ## Phase 1: Foundation (Weeks 1-3)
 
 ### Week 1: Setup & Planning
+
 **Goal:** Set up development environment and project structure
 
 **Tasks:**
+
 - [x] Analyze current codebase
 - [ ] Create development roadmap
 - [ ] Set up version control strategy
@@ -21,11 +23,13 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 - [ ] Set up local testing environment
 
 **Deliverables:**
+
 - Modern project structure
 - Build scripts
 - Development documentation
 
 **Tools Needed:**
+
 - Node.js and npm
 - Web-ext for testing
 - ESLint + Prettier configs
@@ -35,22 +39,26 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 ---
 
 ### Week 2: Manifest V3 Migration
+
 **Goal:** Update to Manifest V3 for cross-browser support
 
 **Tasks:**
+
 - [ ] Update manifest.json to V3
 - [ ] Convert background scripts to service worker
-- [ ] Update API calls (browser.* → chrome.* with polyfill)
+- [ ] Update API calls (browser._ → chrome._ with polyfill)
 - [ ] Test on Firefox, Chrome, Edge
 - [ ] Fix compatibility issues
 - [ ] Update permissions model
 
 **Deliverables:**
+
 - Working Manifest V3 extension
 - Cross-browser compatibility
 - Migration documentation
 
 **Critical Changes:**
+
 ```json
 {
   "manifest_version": 3,
@@ -68,9 +76,11 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 ---
 
 ### Week 3: Modern UI Foundation
+
 **Goal:** Create beautiful, responsive interface
 
 **Tasks:**
+
 - [ ] Design modern UI/UX (Figma or paper sketches)
 - [ ] Create CSS framework/system
 - [ ] Implement dark mode
@@ -80,11 +90,13 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 - [ ] Implement responsive design
 
 **Deliverables:**
+
 - Modern, attractive popup UI
 - Dark mode toggle
 - Responsive layout
 
 **Design Principles:**
+
 - Minimalist and clean
 - Fast and responsive
 - Accessible (WCAG 2.1 AA)
@@ -97,9 +109,11 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 ## Phase 2: Core Features (Weeks 4-6)
 
 ### Week 4: Enhanced Bookmark Display
+
 **Goal:** Improve bookmark viewing and organization
 
 **Tasks:**
+
 - [ ] Show favicon for each bookmark
 - [ ] Display folder/category
 - [ ] Add relative timestamps ("2 days ago")
@@ -108,6 +122,7 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 - [ ] Optimize performance (lazy loading)
 
 **Deliverables:**
+
 - Rich bookmark display
 - Smooth performance
 - Better UX
@@ -117,9 +132,11 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 ---
 
 ### Week 5: Search & Filter
+
 **Goal:** Help users find specific bookmarks quickly
 
 **Tasks:**
+
 - [ ] Implement real-time search (title + URL)
 - [ ] Add date range filter (7, 14, 30 days)
 - [ ] Create filter UI (dropdown/buttons)
@@ -128,19 +145,22 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 - [ ] Highlight search terms
 
 **Deliverables:**
+
 - Working search functionality
 - Flexible filtering options
 - Persistent preferences
 
 **Implementation:**
+
 ```javascript
 // Search algorithm
 function searchBookmarks(bookmarks, query) {
   const lowerQuery = query.toLowerCase();
-  return bookmarks.filter(bookmark => 
-    bookmark.title.toLowerCase().includes(lowerQuery) ||
-    bookmark.url.toLowerCase().includes(lowerQuery)
-  );
+  return bookmarks.filter((bookmark) => {
+    const title = (bookmark.title || '').toLowerCase();
+    const url = (bookmark.url || '').toLowerCase();
+    return title.includes(lowerQuery) || url.includes(lowerQuery);
+  });
 }
 ```
 
@@ -149,9 +169,11 @@ function searchBookmarks(bookmarks, query) {
 ---
 
 ### Week 6: Settings & Preferences
+
 **Goal:** Give users control over their experience
 
 **Tasks:**
+
 - [ ] Create options/settings page
 - [ ] Add theme selector (dark/light/auto)
 - [ ] Configure bookmark limit (25, 50, 100, 200)
@@ -161,11 +183,13 @@ function searchBookmarks(bookmarks, query) {
 - [ ] Add "Reset to defaults" button
 
 **Deliverables:**
+
 - Full settings page
 - Synced preferences across devices
 - User customization
 
 **Settings Structure:**
+
 ```javascript
 const defaultSettings = {
   theme: 'auto',
@@ -173,7 +197,7 @@ const defaultSettings = {
   dateRange: 14,
   displayFormat: 'list',
   showFavicons: true,
-  groupBy: 'date'
+  groupBy: 'date',
 };
 ```
 
@@ -184,9 +208,11 @@ const defaultSettings = {
 ## Phase 3: Polish & Testing (Weeks 7-8)
 
 ### Week 7: Quality Assurance
+
 **Goal:** Fix bugs and optimize performance
 
 **Tasks:**
+
 - [ ] Cross-browser testing (Chrome, Firefox, Edge, Brave)
 - [ ] Performance testing and optimization
 - [ ] Accessibility audit (WCAG 2.1 AA)
@@ -196,11 +222,13 @@ const defaultSettings = {
 - [ ] Bug fixes based on feedback
 
 **Deliverables:**
+
 - Stable, bug-free extension
 - Performance benchmarks met
 - Accessibility compliant
 
 **Performance Targets:**
+
 - Popup opens in < 100ms
 - Search results in < 50ms
 - Memory usage < 5MB
@@ -210,9 +238,11 @@ const defaultSettings = {
 ---
 
 ### Week 8: Export & Basic Analytics
+
 **Goal:** Add data export and simple statistics
 
 **Tasks:**
+
 - [ ] Implement CSV export
 - [ ] Add JSON export
 - [ ] Create HTML export (formatted list)
@@ -221,11 +251,13 @@ const defaultSettings = {
 - [ ] Create export UI
 
 **Deliverables:**
+
 - Multiple export formats
 - Basic statistics dashboard
 - Easy data portability
 
 **Export Formats:**
+
 ```javascript
 // CSV: Title, URL, Date, Folder
 // JSON: Full bookmark objects
@@ -239,9 +271,11 @@ const defaultSettings = {
 ## Phase 4: Store Preparation (Weeks 9-10)
 
 ### Week 9: Marketing Assets
+
 **Goal:** Create compelling store listings
 
 **Tasks:**
+
 - [ ] Write store description (Chrome, Firefox, Edge)
 - [ ] Create 5-7 high-quality screenshots
 - [ ] Record 30-60 second demo video
@@ -252,11 +286,13 @@ const defaultSettings = {
 - [ ] Prepare landing page (optional but recommended)
 
 **Deliverables:**
+
 - Complete store listing materials
 - Professional marketing assets
 - Support infrastructure
 
 **Screenshot Ideas:**
+
 1. Main popup view (light mode)
 2. Main popup view (dark mode)
 3. Search functionality
@@ -270,9 +306,11 @@ const defaultSettings = {
 ---
 
 ### Week 10: Store Submission
+
 **Goal:** Launch on all major browser stores
 
 **Tasks:**
+
 - [ ] Final testing on all browsers
 - [ ] Package extension builds
 - [ ] Submit to Chrome Web Store
@@ -283,11 +321,13 @@ const defaultSettings = {
 - [ ] Create support documentation
 
 **Deliverables:**
+
 - Live extensions on all stores
 - Public launch
 - Support system ready
 
 **Store Checklist:**
+
 - ✅ Extension tested and stable
 - ✅ All assets prepared
 - ✅ Privacy policy published
@@ -302,9 +342,11 @@ const defaultSettings = {
 ## Phase 5: Launch & Iteration (Weeks 11-12)
 
 ### Week 11: Public Launch
+
 **Goal:** Drive initial adoption and gather feedback
 
 **Tasks:**
+
 - [ ] Product Hunt launch
 - [ ] Reddit posts (r/SideProject, r/productivity)
 - [ ] Twitter/X announcement
@@ -315,11 +357,13 @@ const defaultSettings = {
 - [ ] Respond to all user comments
 
 **Deliverables:**
+
 - Initial user base (goal: 500-1000 installs)
 - User feedback collected
 - Initial reviews
 
 **Launch Day Schedule:**
+
 - 8:00 AM: Product Hunt launch
 - 9:00 AM: Social media posts
 - 10:00 AM: Reddit posts
@@ -331,9 +375,11 @@ const defaultSettings = {
 ---
 
 ### Week 12: Iterate & Plan
+
 **Goal:** Analyze results and plan next version
 
 **Tasks:**
+
 - [ ] Analyze usage metrics
 - [ ] Review user feedback
 - [ ] Prioritize feature requests
@@ -344,6 +390,7 @@ const defaultSettings = {
 - [ ] Plan premium features (if pursuing freemium)
 
 **Deliverables:**
+
 - v1.0.1 patch release (if needed)
 - v1.1 roadmap
 - Launch retrospective
@@ -356,6 +403,7 @@ const defaultSettings = {
 ## MVP Feature Checklist
 
 ### Must-Have (Launch Blockers)
+
 - [ ] Manifest V3 compatibility
 - [ ] Cross-browser support (Chrome, Firefox, Edge)
 - [ ] Modern, attractive UI
@@ -369,6 +417,7 @@ const defaultSettings = {
 - [ ] Privacy-respecting (no external data collection)
 
 ### Nice-to-Have (Can ship without)
+
 - [ ] JSON/HTML export
 - [ ] Advanced statistics
 - [ ] Keyboard shortcuts
@@ -379,6 +428,7 @@ const defaultSettings = {
 - [ ] Animation and transitions
 
 ### Future Versions (Post-MVP)
+
 - [ ] Cloud sync (v2.0 - Premium)
 - [ ] Advanced analytics (v2.0 - Premium)
 - [ ] AI-powered features (v3.0)
@@ -391,6 +441,7 @@ const defaultSettings = {
 ## Technical Architecture for MVP
 
 ### File Structure
+
 ```
 recent-bookmarks/
 ├── src/
@@ -421,26 +472,28 @@ recent-bookmarks/
 ```
 
 ### Core APIs Used
+
 ```javascript
 // Bookmarks API
-chrome.bookmarks.getRecent(limit)
-chrome.bookmarks.getTree()
-chrome.bookmarks.search(query)
+chrome.bookmarks.getRecent(limit);
+chrome.bookmarks.getTree();
+chrome.bookmarks.search(query);
 
 // Storage API
-chrome.storage.sync.get(keys)
-chrome.storage.sync.set(items)
+chrome.storage.sync.get(keys);
+chrome.storage.sync.set(items);
 
 // Tabs API (for opening bookmarks)
-chrome.tabs.create({ url })
+chrome.tabs.create({ url });
 
 // Runtime API
-chrome.runtime.onInstalled.addListener()
+chrome.runtime.onInstalled.addListener();
 ```
 
 ### Data Models
 
 **Bookmark Object:**
+
 ```javascript
 {
   id: string,
@@ -453,6 +506,7 @@ chrome.runtime.onInstalled.addListener()
 ```
 
 **Settings Object:**
+
 ```javascript
 {
   theme: 'light' | 'dark' | 'auto',
@@ -469,6 +523,7 @@ chrome.runtime.onInstalled.addListener()
 ## Development Best Practices
 
 ### Code Quality
+
 - ✅ Use ESLint with recommended rules
 - ✅ Format code with Prettier
 - ✅ Write clear, descriptive comments
@@ -477,6 +532,7 @@ chrome.runtime.onInstalled.addListener()
 - ✅ Handle errors gracefully
 
 ### Performance
+
 - ✅ Lazy load bookmarks (don't load all at once)
 - ✅ Debounce search input
 - ✅ Cache folder lookups
@@ -485,6 +541,7 @@ chrome.runtime.onInstalled.addListener()
 - ✅ Optimize images and icons
 
 ### Security
+
 - ✅ Minimal permissions (only bookmarks + storage)
 - ✅ Content Security Policy in manifest
 - ✅ No eval() or dangerous patterns
@@ -493,6 +550,7 @@ chrome.runtime.onInstalled.addListener()
 - ✅ Regular security audits
 
 ### Accessibility
+
 - ✅ Semantic HTML
 - ✅ ARIA labels where needed
 - ✅ Keyboard navigation
@@ -505,6 +563,7 @@ chrome.runtime.onInstalled.addListener()
 ## Success Metrics for MVP
 
 ### Installation Metrics
+
 - **Week 1:** 100-200 installs
 - **Week 2:** 300-500 installs
 - **Week 4:** 500-1,000 installs
@@ -512,18 +571,21 @@ chrome.runtime.onInstalled.addListener()
 - **Week 12:** 2,000-5,000 installs
 
 ### Engagement Metrics
+
 - **Weekly Active Users:** 60-70% of total installs
 - **Daily Active Users:** 30-40% of total installs
 - **Average session length:** 30-60 seconds
 - **Sessions per week:** 5-10
 
 ### Quality Metrics
+
 - **Store rating:** 4.3+ stars
 - **Critical bugs:** 0
 - **Response time to issues:** < 24 hours
 - **Review response rate:** 100%
 
 ### Technical Metrics
+
 - **Popup load time:** < 100ms
 - **Search performance:** < 50ms
 - **Memory usage:** < 5MB
@@ -534,11 +596,13 @@ chrome.runtime.onInstalled.addListener()
 ## Resource Requirements
 
 ### Time Investment
+
 - **Total MVP development:** 120-150 hours over 12 weeks
 - **Weekly commitment:** 10-15 hours
 - **Post-launch support:** 5-10 hours/week
 
 ### Skills Needed
+
 - JavaScript (intermediate level)
 - HTML/CSS (basic-intermediate)
 - Browser extension APIs (can learn)
@@ -546,6 +610,7 @@ chrome.runtime.onInstalled.addListener()
 - UI/UX design (basic, or use templates)
 
 ### Tools & Costs
+
 - **Development:** Free (VS Code, Node.js, Git)
 - **Design:** Free (Figma free tier, Canva)
 - **Testing:** Free (Browser dev tools, web-ext)
@@ -559,6 +624,7 @@ chrome.runtime.onInstalled.addListener()
 ## Risk Management
 
 ### Common Pitfalls to Avoid
+
 1. **Scope creep:** Stick to MVP features, resist adding more
 2. **Perfectionism:** Ship when it's good enough, iterate later
 3. **Over-engineering:** Keep it simple, add complexity later
@@ -566,6 +632,7 @@ chrome.runtime.onInstalled.addListener()
 5. **Poor marketing:** Don't build in silence, promote early and often
 
 ### Contingency Plans
+
 - **Behind schedule:** Cut nice-to-have features, ship MVP sooner
 - **Technical issues:** Seek help from communities (Reddit, Stack Overflow)
 - **Low adoption:** Double down on marketing, improve store listing
@@ -577,6 +644,7 @@ chrome.runtime.onInstalled.addListener()
 ## Next Steps After MVP
 
 ### Version 1.1 (Month 4-5)
+
 - Advanced statistics dashboard
 - More export formats
 - Keyboard shortcuts
@@ -584,6 +652,7 @@ chrome.runtime.onInstalled.addListener()
 - Improved performance
 
 ### Version 2.0 (Month 6-9)
+
 - Premium features framework
 - Cloud sync and backup
 - Cross-device synchronization
@@ -591,6 +660,7 @@ chrome.runtime.onInstalled.addListener()
 - Enhanced analytics
 
 ### Version 2.5 (Month 10-12)
+
 - Team collaboration features
 - Shared collections
 - Advanced search and filtering
@@ -598,6 +668,7 @@ chrome.runtime.onInstalled.addListener()
 - Browser integration improvements
 
 ### Version 3.0 (Year 2+)
+
 - AI-powered features
 - Mobile companion apps
 - Advanced automation
@@ -617,6 +688,7 @@ This 90-day roadmap provides a clear path from the current basic extension to a 
 5. **Sustainable foundation for growth**
 
 **Key Success Factors:**
+
 - Stay focused on MVP scope
 - Ship quickly, iterate based on feedback
 - Build in public, engage with community

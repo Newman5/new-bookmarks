@@ -4,16 +4,14 @@
   "description": "A modern browser extension to track, organize, and reflect on your recent bookmarks",
   "main": "background.js",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.{js,json,md,css,html}\"",
-    "format:check": "prettier --check \"**/*.{js,json,md,css,html}\"",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix",
+    "format": "prettier --write \"*.{js,json,md,html}\"",
+    "format:check": "prettier --check \"*.{js,json,md,html}\"",
     "test": "echo \"No tests specified yet\" && exit 0",
-    "build:firefox": "web-ext build --source-dir=. --artifacts-dir=./dist/firefox --overwrite-dest",
-    "build:chrome": "node scripts/build-chrome.js",
-    "start:firefox": "web-ext run --source-dir=. --browser-console",
-    "start:chrome": "node scripts/start-chrome.js",
-    "package": "npm run lint && npm run format:check && npm run build:firefox && npm run build:chrome"
+    "build:firefox": "web-ext build --artifacts-dir=./dist/firefox --overwrite-dest --ignore-files=node_modules dist .git .github CONTRIBUTING.md EXECUTIVE_SUMMARY.md MARKETING_QUICK_START.md MODERNIZATION_STRATEGY.md MONETIZATION_STRATEGY.md MVP_ROADMAP.md package.json package-lock.json .eslintrc.js .prettierrc .gitignore",
+    "start:firefox": "web-ext run --browser-console --ignore-files=node_modules dist .git",
+    "package": "npm run lint && npm run format:check && npm run build:firefox"
   },
   "repository": {
     "type": "git",

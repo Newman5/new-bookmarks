@@ -21,9 +21,11 @@ A modern, cross-browser extension that helps you track, organize, and review you
 ## 📥 Installation
 
 ### Firefox
+
 Install from the [Firefox Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/recent-bookmarks/)
 
 ### Chrome / Edge (Coming Soon)
+
 Chrome Web Store and Edge Add-ons submissions planned for v1.0
 
 ## 🚀 Quick Start
@@ -36,10 +38,12 @@ Chrome Web Store and Edge Add-ons submissions planned for v1.0
 ## 🛠️ Development
 
 ### Prerequisites
+
 - Node.js 18+ and npm 9+
 - Firefox or Chrome for testing
 
 ### Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/Newman5/new-bookmarks.git
@@ -62,6 +66,7 @@ npm run package
 ```
 
 ### Project Structure
+
 ```
 recent-bookmarks/
 ├── background.js          # Background service worker
@@ -84,24 +89,31 @@ recent-bookmarks/
 
 ## 🗺️ Roadmap
 
-### v1.0 - MVP (Current)
+### v0.2 - Current State
+
 - [x] Core bookmark viewing
 - [x] Basic date filtering
 - [x] Time-ago display
+- [x] Firefox support
+
+### v1.0 - MVP (In Progress)
+
 - [ ] Manifest V3 migration
 - [ ] Modern UI with dark mode
 - [ ] Search functionality
 - [ ] Settings page
 - [ ] Export capabilities
-- [ ] Cross-browser support
+- [ ] Cross-browser support (Chrome, Firefox, Edge)
 
 ### v1.1 - Enhanced Features
+
 - [ ] Advanced statistics
 - [ ] Folder hierarchy display
 - [ ] Keyboard shortcuts
 - [ ] Multiple export formats
 
 ### v2.0 - Premium Features
+
 - [ ] Cloud sync and backup
 - [ ] Advanced analytics
 - [ ] AI-powered categorization
@@ -112,6 +124,7 @@ See [MVP_ROADMAP.md](MVP_ROADMAP.md) for detailed timeline.
 ## 🤝 Contributing
 
 Contributions are welcome! Whether it's:
+
 - 🐛 Bug reports
 - 💡 Feature suggestions
 - 📝 Documentation improvements
@@ -122,6 +135,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## 💰 Support
 
 This project is free and open source. If you find it useful, consider:
+
 - ⭐ Starring the repository
 - 🐛 Reporting bugs
 - 💡 Suggesting features
@@ -134,6 +148,7 @@ MIT License - see [LICENSE](LICENSE) for details
 ## 🙏 Acknowledgments
 
 Based on:
+
 - [Firefox WebExtensions Examples](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
 - MDN Web Extensions tutorials
 - Community feedback and contributions
@@ -146,4 +161,3 @@ Based on:
 ---
 
 **Built with ❤️ for people who love to learn and reflect**
-

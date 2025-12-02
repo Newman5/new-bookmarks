@@ -18,7 +18,7 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 - [ ] Create development roadmap
 - [ ] Set up version control strategy
 - [ ] Initialize package.json and dependencies
-- [ ] Set up ESLint and Prettier
+- [ ] Set up ESLint for code quality
 - [ ] Create project structure
 - [ ] Set up local testing environment
 
@@ -32,7 +32,7 @@ This roadmap focuses on delivering maximum value with minimal complexity. Each p
 
 - Node.js and npm
 - Web-ext for testing
-- ESLint + Prettier configs
+- ESLint config
 
 **Time Estimate:** 8-12 hours
 
@@ -464,7 +464,6 @@ recent-bookmarks/
 ├── dist/                           # Build output
 ├── tests/                          # Test files (optional for MVP)
 ├── .eslintrc.js                    # ESLint config
-├── .prettierrc                     # Prettier config
 ├── manifest.json                   # Extension manifest
 ├── package.json                    # Dependencies
 ├── webpack.config.js               # Build config (optional)
@@ -525,7 +524,6 @@ chrome.runtime.onInstalled.addListener();
 ### Code Quality
 
 - ✅ Use ESLint with recommended rules
-- ✅ Format code with Prettier
 - ✅ Write clear, descriptive comments
 - ✅ Keep functions small and focused
 - ✅ Use meaningful variable names

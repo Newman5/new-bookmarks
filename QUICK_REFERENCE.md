@@ -25,13 +25,13 @@ This is your quick reference guide for the Recent Bookmarks modernization and mo
 ## 🎯 Executive Summary (TL;DR)
 
 ### The Opportunity
-Transform a basic Firefox bookmark viewer into a cross-platform productivity tool serving 100K+ users with sustainable revenue.
+Build a community-focused bookmark tool with 500 engaged users and sustainable $20K/year support.
 
 ### The Strategy
 1. **Modernize:** Manifest V3, cross-browser, modern UI (12 weeks)
-2. **Monetize:** Freemium model at $2.99/month premium tier
-3. **Market:** Product Hunt, Reddit, browser stores, content marketing
-4. **Scale:** Target 50K users, $90K/year revenue in 18-24 months
+2. **Community Model:** ALL features free, optional $20-100/year supporter program
+3. **Market:** Organic, community-driven growth
+4. **Sustain:** Target 500 users, 330 supporters (66%), $20K/year
 
 ### The Investment
 - **Time:** 120-150 hours over 12 weeks (part-time)
@@ -39,10 +39,10 @@ Transform a basic Firefox bookmark viewer into a cross-platform productivity too
 - **Skills:** JavaScript, HTML/CSS (can learn as you go)
 
 ### The Returns
-- **6 months:** 5,000 users, 4.3+ stars
-- **12 months:** 25,000 users, $1-2.5K/month revenue
-- **24 months:** 100,000 users, $5-10K/month revenue
-- **Long-term:** Potential for $15M+ annually at scale
+- **6 months:** 200-300 users, 20-30 supporters, $400-$1.5K/year
+- **12 months:** 400-500 users, 100-150 supporters, $2-7.5K/year
+- **24 months:** 500-750 users, 200-330 supporters, $4-20K/year
+- **Philosophy:** Small engaged community > large anonymous user base
 
 ---
 
@@ -62,7 +62,6 @@ cd /home/runner/work/new-bookmarks/new-bookmarks
 
 # Verify setup
 npm run lint        # Should pass ✅
-npm run format:check # Should pass ✅
 
 # Test in Firefox
 npm run start:firefox
@@ -78,28 +77,30 @@ Begin with Phase 1 of the MVP Roadmap:
 
 ## 📊 Key Numbers to Remember
 
-### Market Size
-- 3+ billion browser users worldwide
-- 500M active bookmark users
-- 1-5% achievable market penetration
+### Community Target
+- **Target users:** 500 engaged, active community members
+- **Support goal:** 330 supporters (66% support rate)
+- **Revenue goal:** $20,000/year to sustain development
 
-### Pricing
-- **Free:** Core features for 90-95% of users
-- **Premium:** $2.99/month or $24.99/year
-- **Team:** $9.99/user/month (min 5 users)
+### Supporter Pricing Tiers
+- **Friend:** $20/year (support development)
+- **Patron:** $50/year (generous support)
+- **Champion:** $100/year (champion the project)
+- **Lifetime:** $200 one-time (lifetime supporter)
 
-### Conversion Targets
-- 5-10% free → premium conversion
-- 50-70% weekly active user rate
+### Community Philosophy
+- 100% features free for 100% of users
+- No paywalls, no feature gating, ever
+- Supporters fund the commons, everyone benefits
+- 70-80% weekly active user rate (high engagement)
 - 4.5+ star rating goal
 
-### Revenue Projections
-| Milestone | Users | Premium | MRR | ARR |
-|-----------|-------|---------|-----|-----|
-| 6 months | 5K | 250 | $750 | $9K |
-| 12 months | 25K | 1,250 | $3,750 | $45K |
-| 18 months | 50K | 2,500 | $7,500 | $90K |
-| 24 months | 100K | 5,000 | $15,000 | $180K |
+### Revenue Path to $20K/year
+| Milestone | Total Users | Supporters | Annual Revenue |
+|-----------|-------------|------------|----------------|
+| 6 months | 200-300 | 20-30 | $400-$1,500 |
+| 12 months | 400-500 | 100-150 | $2,000-$7,500 |
+| 24 months | 500-750 | 200-330 | $4,000-$20,000 |
 
 ---
 
@@ -112,7 +113,7 @@ Begin with Phase 1 of the MVP Roadmap:
 - [x] 90-day MVP roadmap
 - [x] Marketing and launch plan
 - [x] Developer documentation
-- [x] Modern development tooling (ESLint, Prettier)
+- [x] Modern development tooling (ESLint)
 - [x] Code quality baseline established
 - [x] Security review passed (0 vulnerabilities)
 
@@ -165,16 +166,12 @@ Begin with Phase 1 of the MVP Roadmap:
 npm run lint           # Check for errors
 npm run lint:fix       # Auto-fix errors
 
-# Formatting
-npm run format         # Format all files
-npm run format:check   # Check formatting
-
 # Testing
 npm run start:firefox  # Test in Firefox
 
 # Building
 npm run build:firefox  # Package for Firefox
-npm run package        # Full build (lint + format + build)
+npm run package        # Full build (lint + build)
 ```
 
 ---

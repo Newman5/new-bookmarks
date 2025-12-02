@@ -72,7 +72,7 @@ This document outlines a comprehensive strategy to modernize the Recent Bookmark
 - **Package.json** for dependency management
 - **Webpack/Rollup** for bundling (optional for now)
 - **ESLint** for code quality
-- **Prettier** for consistent formatting
+- **ESLint** for code quality
 - **Web-ext** for testing and packaging
 
 **Benefits:**
@@ -344,7 +344,7 @@ class SyncManager {
 - ✅ ESLint with recommended rules
 - ✅ 80%+ code coverage
 - ✅ Automated testing (unit + e2e)
-- ✅ Consistent formatting (Prettier)
+- ✅ Consistent code quality (ESLint)
 - ✅ Documentation for all public APIs
 
 ### Security

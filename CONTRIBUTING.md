@@ -86,13 +86,8 @@ npm run lint
 # Fix linting issues automatically
 npm run lint:fix
 
-# Format code
-npm run format
-
 # Test in browser
 npm run start:firefox
-# or
-npm run start:chrome
 ```
 
 6. **Commit Your Changes**
@@ -201,7 +196,6 @@ var get_bookmarks = function (l) {
 
 - [ ] Code follows style guidelines
 - [ ] Linting passes (`npm run lint`)
-- [ ] Code is formatted (`npm run format`)
 - [ ] Changes are tested in browser
 - [ ] Documentation is updated
 - [ ] Commit messages are clear
@@ -357,7 +351,6 @@ recent-bookmarks/
 
 - [web-ext](https://github.com/mozilla/web-ext) - Testing and packaging
 - [ESLint](https://eslint.org/) - Code linting
-- [Prettier](https://prettier.io/) - Code formatting
 
 ### Community
 

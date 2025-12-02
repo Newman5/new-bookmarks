@@ -6,12 +6,10 @@
   "scripts": {
     "lint": "eslint *.js",
     "lint:fix": "eslint *.js --fix",
-    "format": "prettier --write \"*.{js,json,md,html}\"",
-    "format:check": "prettier --check \"*.{js,json,md,html}\"",
     "test": "echo \"No tests specified yet\" && exit 0",
-    "build:firefox": "web-ext build --artifacts-dir=./dist/firefox --overwrite-dest --ignore-files=node_modules dist .git .github CONTRIBUTING.md EXECUTIVE_SUMMARY.md MARKETING_QUICK_START.md MODERNIZATION_STRATEGY.md MONETIZATION_STRATEGY.md MVP_ROADMAP.md package.json package-lock.json .eslintrc.js .prettierrc .gitignore",
+    "build:firefox": "web-ext build --artifacts-dir=./dist/firefox --overwrite-dest --ignore-files=node_modules dist .git .github CONTRIBUTING.md EXECUTIVE_SUMMARY.md MARKETING_QUICK_START.md MODERNIZATION_STRATEGY.md MONETIZATION_STRATEGY.md MVP_ROADMAP.md package.json package-lock.json .eslintrc.js .gitignore",
     "start:firefox": "web-ext run --browser-console --ignore-files=node_modules dist .git",
-    "package": "npm run lint && npm run format:check && npm run build:firefox"
+    "package": "npm run lint && npm run build:firefox"
   },
   "repository": {
     "type": "git",
@@ -35,7 +33,6 @@
   "homepage": "https://github.com/Newman5/new-bookmarks#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
-    "prettier": "^3.2.5",
     "web-ext": "^7.11.0"
   },
   "engines": {

@@ -50,7 +50,7 @@ This is a real, validated use case for knowledge workers, researchers, and refle
 **Actions:**
 
 - ✅ Add package.json with npm scripts
-- ✅ Configure ESLint + Prettier
+- ✅ Configure ESLint for code quality
 - ✅ Set up .gitignore
 - 🔄 Migrate to Manifest V3
 - 🔄 Implement modern build system
@@ -97,50 +97,64 @@ This is a real, validated use case for knowledge workers, researchers, and refle
 - Unique value proposition
 - Foundation for premium features
 
-### 2. Monetization Strategy (Medium Priority)
+### 2. Monetization Strategy: Community-Supported Development
 
-#### Recommended Model: Freemium
+#### Recommended Model: Supporter Program (No Feature Gating)
 
-**Why:** Serves most users for free while generating sustainable revenue from power users
+**Philosophy:** ALL features free for ALL users. Optional support from those who value the project.
 
-#### Free Tier (90-95% of users)
+#### Free for Everyone (100% of users)
 
-- View recent bookmarks (last 2 weeks)
-- Basic filtering and search
-- Single device
-- CSV export
-- Basic statistics
+- ✅ All bookmarks features (unlimited)
+- ✅ Full search and filtering
+- ✅ All export formats (CSV, JSON, HTML)
+- ✅ Statistics and insights
+- ✅ Dark mode and themes
+- ✅ Everything we build
 
-#### Premium Tier: "Pro" ($2.99/month or $24.99/year)
+**No paywalls. No locked features. Ever.**
 
-**Target conversion rate:** 5-10% of active users
+#### Optional Supporter Tiers
 
-**Features:**
+**Why support?** Because you value the tool and want it to continue.
 
-- ☁️ Cloud sync across devices
-- 💾 Automatic backups
-- 📊 Advanced analytics
-- 🏷️ AI-powered smart tagging
-- 📤 Advanced export formats
-- 🎨 Custom themes
-- ⚡ Priority support
+- 🥉 **Friend** - $20/year (support development)
+- 🥈 **Patron** - $50/year (generous support)
+- 🥇 **Champion** - $100/year (champion the project)
+- 💎 **Lifetime** - $200 one-time (lifetime supporter)
 
-#### Revenue Projections
+**Supporter Benefits (non-feature):**
+- Supporter badge in extension
+- Early access to new features (1-2 weeks)
+- Voting rights on priorities
+- Community Discord access
+- Name in credits
+- Quarterly community rewards
 
-| Users | Premium (5%) | MRR     | ARR   |
-| ----- | ------------ | ------- | ----- |
-| 10K   | 500          | $1,500  | $18K  |
-| 50K   | 2,500        | $7,500  | $90K  |
-| 100K  | 5,000        | $15,000 | $180K |
-| 500K  | 25,000       | $75,000 | $900K |
+#### Community Rewards Program
 
-**Conservative Goal:** 50,000 users with 5% conversion = $90K/year after 18-24 months
+After covering costs, remaining funds distributed:
+- 50% → Community fund (supporter-voted: donations, bounties, charity)
+- 30% → Developer time
+- 20% → Infrastructure
 
-#### Alternative Revenue Streams
+#### Revenue Targets (Realistic)
 
-1. **Team/Business plan:** $9.99/user/month (min 5 users)
-2. **Donations:** GitHub Sponsors, Buy Me a Coffee
-3. **One-time payment:** $15-25 lifetime (simpler, less recurring revenue)
+**Goal:** 500 engaged users with 66% support rate to reach $20K/year
+
+| Tier      | Count | Rate   | Revenue |
+| --------- | ----- | ------ | ------- |
+| Friend    | 150   | $20    | $3,000  |
+| Patron    | 100   | $50    | $5,000  |
+| Champion  | 50    | $100   | $5,000  |
+| Lifetime  | 30    | $200   | $6,000  |
+| Tips      | -     | -      | $1,000  |
+| **Total** | 330   | -      | **$20K/year** |
+
+**This requires 330 supporters out of 500 users (66% support rate) - ambitious but achievable for a truly valuable community tool.**
+
+**Year 1 realistic:** 200-250 supporters = $8K-13K
+**Year 2 sustainable:** 300-350 supporters = $15K-20K
 
 ### 3. Marketing Strategy (High Priority)
 
@@ -159,10 +173,10 @@ This is a real, validated use case for knowledge workers, researchers, and refle
 
 #### Market Opportunity
 
-- **TAM (Total):** 3+ billion browser users
-- **SAM (Serviceable):** 500M active bookmark users
-- **SOM (Obtainable):** 5M users (1% of SAM) in 3 years
-- **Revenue Potential:** $15M+ annually at scale
+- **Target:** 500 engaged, active users (community-focused)
+- **Support Goal:** 330 supporters (66% support rate)
+- **Revenue Goal:** $20,000/year to sustain development
+- **Philosophy:** Small, engaged community beats large, anonymous user base
 
 #### Go-to-Market Plan
 
@@ -248,27 +262,29 @@ This is a real, validated use case for knowledge workers, researchers, and refle
 - ⚡ Zero critical bugs
 - ⚡ 95%+ positive reviews
 
-### Business Metrics (6 months)
+### Community Metrics (6 months)
 
-- 📊 5,000+ total installs
-- 📊 1,000+ weekly active users
-- 📊 4.3+ star rating
-- 📊 100+ email subscribers
-
-### Business Metrics (12 months)
-
-- 📊 25,000+ total installs
-- 📊 10,000+ weekly active users
+- 📊 200-300 total users (targeted, quality community)
+- 📊 150-200 weekly active users (70-80% engagement)
 - 📊 4.5+ star rating
-- 📊 500+ premium subscribers
-- 📊 $1,000-2,500/month revenue
+- 📊 20-30 supporters ($400-$1,500/year)
+- 📊 Active community discussions
 
-### Business Metrics (24 months)
+### Community Metrics (12 months)
 
-- 📊 100,000+ total installs
-- 📊 50,000+ weekly active users
-- 📊 2,500+ premium subscribers
-- 📊 $5,000-10,000/month revenue
+- 📊 400-500 total users
+- 📊 300-350 weekly active users (75%+ engagement)
+- 📊 4.6+ star rating
+- 📊 100-150 supporters ($2,000-$7,500/year)
+- 📊 Monthly community updates
+
+### Community Metrics (24 months)
+
+- 📊 500-750 total users (sustainable scale)
+- 📊 400-500 weekly active users (high engagement)
+- 📊 4.7+ star rating
+- 📊 200-330 supporters ($4,000-$20,000/year - goal met!)
+- 📊 Thriving contributor community
 
 ---
 

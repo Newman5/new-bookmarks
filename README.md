@@ -55,9 +55,6 @@ npm install
 # Run linter
 npm run lint
 
-# Format code
-npm run format
-
 # Test in Firefox
 npm run start:firefox
 

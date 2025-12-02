@@ -1,0 +1,47 @@
+{
+  "name": "recent-bookmarks",
+  "version": "1.0.0",
+  "description": "A modern browser extension to track, organize, and reflect on your recent bookmarks",
+  "main": "background.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,json,md,css,html}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md,css,html}\"",
+    "test": "echo \"No tests specified yet\" && exit 0",
+    "build:firefox": "web-ext build --source-dir=. --artifacts-dir=./dist/firefox --overwrite-dest",
+    "build:chrome": "node scripts/build-chrome.js",
+    "start:firefox": "web-ext run --source-dir=. --browser-console",
+    "start:chrome": "node scripts/start-chrome.js",
+    "package": "npm run lint && npm run format:check && npm run build:firefox && npm run build:chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Newman5/new-bookmarks.git"
+  },
+  "keywords": [
+    "bookmarks",
+    "browser-extension",
+    "productivity",
+    "firefox",
+    "chrome",
+    "edge",
+    "organization",
+    "web-extension"
+  ],
+  "author": "Newman5",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Newman5/new-bookmarks/issues"
+  },
+  "homepage": "https://github.com/Newman5/new-bookmarks#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.5",
+    "web-ext": "^7.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

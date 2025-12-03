@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener((details) => {
     chrome.storage.sync.set({
       theme: 'auto',
       dateRange: 14,
-      bookmarkLimit: 100,
+      bookmarkLimit: 200,
     }, () => {
       console.log('Default settings initialized');
     });

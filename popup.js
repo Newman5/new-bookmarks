@@ -34,22 +34,25 @@ async function loadSettings() {
         dateRange: result.dateRange || 14,
         bookmarkLimit: result.bookmarkLimit || 200,
       };
-      
+
       // Set the date range select value
       const dateRangeSelect = document.getElementById('date-range');
       if (dateRangeSelect) {
         dateRangeSelect.value = currentSettings.dateRange;
       }
-      
+
       resolve();
     });
   });
 }
 
 // Save settings to storage
-function saveSettings() {
-  browserAPI.storage.sync.set(currentSettings, () => {
-    console.log('Settings saved');
+async function saveSettings() {
+  return new Promise((resolve) => {
+    browserAPI.storage.sync.set(currentSettings, () => {
+      console.log('Settings saved');
+      resolve();
+    });
   });
 }
 
@@ -112,7 +115,7 @@ async function loadBookmarks() {
     const startDate = Date.now() - dateRangeMs;
     
     // Filter bookmarks by date and remove folders
-    allBookmarks = bookmarkItems.filter((item) => 
+    allBookmarks = bookmarkItems.filter((item) =>
       item.url && item.dateAdded >= startDate,
     );
     
@@ -170,8 +173,13 @@ function displayBookmarks(searchQuery = '') {
     const metaEl = document.createElement('div');
     metaEl.className = 'bookmark-meta';
     const timeAgo = getTimeAgo(bookmark.dateAdded);
-    const url = new URL(bookmark.url).hostname;
-    metaEl.textContent = `${url} • ${timeAgo}`;
+    let hostname = 'Unknown';
+    try {
+      hostname = new URL(bookmark.url).hostname;
+    } catch (error) {
+      console.warn('Invalid URL for bookmark:', bookmark.url);
+    }
+    metaEl.textContent = `${hostname} • ${timeAgo}`;
     
     contentEl.appendChild(titleEl);
     contentEl.appendChild(metaEl);
@@ -189,14 +197,14 @@ function createFavicon(url) {
     const domain = new URL(url).hostname;
     const favicon = document.createElement('img');
     favicon.className = 'favicon';
-    favicon.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
+    favicon.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=32`;
     favicon.alt = '';
     
     // Fallback if favicon fails to load
     favicon.onerror = function() {
       const placeholder = document.createElement('div');
       placeholder.className = 'favicon-placeholder';
-      placeholder.textContent = domain[0].toUpperCase();
+      placeholder.textContent = domain && domain.length > 0 ? domain[0].toUpperCase() : '?';
       this.parentNode.replaceChild(placeholder, this);
     };
     
@@ -239,7 +247,7 @@ function highlightText(text, query) {
   if (!query) return escapeHtml(text);
   
   const escapedText = escapeHtml(text);
-  const escapedQuery = escapeHtml(query);
+  const escapedQuery = escapeRegex(escapeHtml(query));
   const regex = new RegExp(`(${escapedQuery})`, 'gi');
   return escapedText.replace(regex, '<span class="highlight">$1</span>');
 }
@@ -249,6 +257,11 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Escape regex special characters
+function escapeRegex(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 // Get relative time string

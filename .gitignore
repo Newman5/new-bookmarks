@@ -23,3 +23,6 @@ web-ext-artifacts/
 # OS files
 Thumbs.db
 desktop.ini
+
+# Private dev notes
+dev-notes/

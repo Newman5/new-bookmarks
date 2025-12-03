@@ -52,8 +52,8 @@ Have an idea? Open an issue with:
 1. **Fork and Clone**
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/new-bookmarks.git
-cd new-bookmarks
+git clone https://github.com/YOUR-USERNAME/recent-bookmarks.git
+cd recent-bookmarks
 ```
 
 2. **Install Dependencies**
@@ -354,8 +354,8 @@ recent-bookmarks/
 
 ### Community
 
-- [GitHub Discussions](https://github.com/Newman5/new-bookmarks/discussions)
-- [GitHub Issues](https://github.com/Newman5/new-bookmarks/issues)
+- [GitHub Discussions](https://github.com/Newman5/recent-bookmarks/discussions)
+- [GitHub Issues](https://github.com/Newman5/recent-bookmarks/issues)
 
 ## 🤔 Questions?
 

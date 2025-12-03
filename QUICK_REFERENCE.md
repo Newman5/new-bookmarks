@@ -58,7 +58,7 @@ Read in this order:
 ### 2. Set Up Development (30 mins)
 ```bash
 # You already have dependencies installed
-cd /home/runner/work/new-bookmarks/new-bookmarks
+cd /home/runner/work/recent-bookmarks/recent-bookmarks
 
 # Verify setup
 npm run lint        # Should pass ✅
@@ -274,8 +274,8 @@ npm run package        # Full build (lint + build)
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/Newman5/new-bookmarks/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/Newman5/new-bookmarks/discussions)
+- **Issues:** [GitHub Issues](https://github.com/Newman5/recent-bookmarks/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/Newman5/recent-bookmarks/discussions)
 - **Documentation:** See documents in this directory
 
 ---

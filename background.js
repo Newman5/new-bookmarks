@@ -25,9 +25,9 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 // Listen for extension installation (browser namespace)
-browser.runtime.onInstalled.addListener(() => {
+/* browser.runtime.onInstalled.addListener(() => {
   browser.tabs.create({ url: "popup.html" });
 });
-
+ */
 // Log when the service worker starts
 console.log('Recent Bookmarks service worker loaded');

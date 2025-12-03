@@ -18,6 +18,8 @@ A modern, cross-browser extension that helps you track, organize, and review you
 - 🔒 Privacy-focused (no cloud, no tracking)
 - 🌐 Cross-browser compatible (Firefox, Chrome, Edge)
 
+This extension requests access to your bookmarks to display and filter your recent bookmarks. It also uses browser storage to save your settings and preferences. **No data is sent outside your browser**.
+
 ## 📥 Installation
 
 ### Firefox
@@ -46,8 +48,8 @@ Chrome Web Store and Edge Add-ons submissions planned for v1.0
 
 ```bash
 # Clone the repository
-git clone https://github.com/Newman5/new-bookmarks.git
-cd new-bookmarks
+git clone https://github.com/Newman5/recent-bookmarks.git
+cd recent-bookmarks
 
 # Install dependencies
 npm install
@@ -98,20 +100,15 @@ recent-bookmarks/
 - [ ] Manifest V3 migration
 - [ ] Modern UI with dark mode
 - [ ] Search functionality
-- [ ] Settings page
-- [ ] Export capabilities
 - [ ] Cross-browser support (Chrome, Firefox, Edge)
 
 ### v1.1 - Enhanced Features
 
 - [ ] Advanced statistics
-- [ ] Folder hierarchy display
-- [ ] Keyboard shortcuts
 - [ ] Multiple export formats
 
 ### v2.0 - Premium Features
 
-- [ ] Cloud sync and backup
 - [ ] Advanced analytics
 - [ ] AI-powered categorization
 - [ ] Team collaboration
@@ -152,8 +149,8 @@ Based on:
 
 ## 📧 Contact
 
-- **Issues**: [GitHub Issues](https://github.com/Newman5/new-bookmarks/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Newman5/new-bookmarks/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Newman5/recent-bookmarks/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Newman5/recent-bookmarks/discussions)
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Date:** December 2, 2025  
 **Project:** Recent Bookmarks Browser Extension  
-**Repository:** https://github.com/Newman5/new-bookmarks
+**Repository:** https://github.com/Newman5/recent-bookmarks
 
 ---
 

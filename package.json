@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Newman5/new-bookmarks.git"
+    "url": "git+https://github.com/Newman5/recent-bookmarks.git"
   },
   "keywords": [
     "bookmarks",
@@ -28,9 +28,9 @@
   "author": "Newman5",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Newman5/new-bookmarks/issues"
+    "url": "https://github.com/Newman5/recent-bookmarks/issues"
   },
-  "homepage": "https://github.com/Newman5/new-bookmarks#readme",
+  "homepage": "https://github.com/Newman5/recent-bookmarks#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
     "web-ext": "^7.11.0"

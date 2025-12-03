@@ -141,7 +141,9 @@ function displayBookmarks(searchQuery = '') {
   const emptyStateEl = document.getElementById('empty-state');
   
   // Clear existing bookmarks
-  bookmarksListEl.innerHTML = '';
+  // replace innerHTML to CSP and XSS compliance
+
+  bookmarksListEl.textContent = '';
   
   if (filteredBookmarks.length === 0) {
     bookmarksListEl.style.display = 'none';
@@ -169,8 +171,10 @@ function displayBookmarks(searchQuery = '') {
     // Create title
     const titleEl = document.createElement('div');
     titleEl.className = 'bookmark-title';
-    titleEl.innerHTML = highlightText(bookmark.title || 'Untitled', searchQuery);
-    
+    const highlightNode = highlightText(bookmark.title || 'Untitled', searchQuery);
+    titleEl.textContent = ''; // Clear previous content
+    titleEl.appendChild(highlightNode);
+
     // Create meta info
     const metaEl = document.createElement('div');
     metaEl.className = 'bookmark-meta';
@@ -258,7 +262,7 @@ function highlightText(text, query) {
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
-  return div.innerHTML;
+  return div.textContent;
 }
 
 // Escape regex special characters

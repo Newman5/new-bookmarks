@@ -10,6 +10,15 @@
   },
 
   "permissions": ["bookmarks", "storage"],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "icons/star-filled-38.png",
+          "popup.html"
+        ],
+        "extension_ids": []
+      }
+    ],
 
   "action": {
     "default_icon": "icons/star-filled-38.png",
@@ -17,6 +26,9 @@
   },
 
   "background": {
+    "scripts": [
+      "background.js"
+    ],
     "service_worker": "background.js"
   }
 }

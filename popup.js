@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadSettings() {
   return new Promise((resolve) => {
     browserAPI.storage.sync.get(['theme', 'dateRange', 'bookmarkLimit'], (result) => {
+      // Ensure result is an object
+      result = result || {};
       currentSettings = {
         theme: result.theme || 'auto',
         dateRange: result.dateRange || 14,

@@ -3,6 +3,11 @@
  * This handles extension lifecycle events and background tasks
  */
 
+// Polyfill for browser namespace (Chrome compatibility)
+if (typeof browser === "undefined") {
+  globalThis.browser = chrome;
+}
+
 // Listen for extension installation or updates
 chrome.runtime.onInstalled.addListener((details) => {
   console.log('Recent Bookmarks extension installed/updated:', details.reason);
@@ -17,6 +22,11 @@ chrome.runtime.onInstalled.addListener((details) => {
       console.log('Default settings initialized');
     });
   }
+});
+
+// Listen for extension installation (browser namespace)
+browser.runtime.onInstalled.addListener(() => {
+  browser.tabs.create({ url: "popup.html" });
 });
 
 // Log when the service worker starts

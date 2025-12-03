@@ -1,33 +1,23 @@
 /*
- * Searches for bookmarks
+ * Background service worker for Recent Bookmarks extension
+ * This handles extension lifecycle events and background tasks
  */
-function searchBookmarks() {
-  const ONE_WEEK = 1 * 24 * 60 * 60 * 1000; // one week in milliseconds
-  const startDate = new Date(Date.now() - ONE_WEEK);
-  const searching = browser.bookmarks.getRecent(25);
-  searching.then((bookmarkItems) => {
-    console.log('Found ' + bookmarkItems.length + ' bookmark(s):');
-    const recentBookmarks = bookmarkItems.filter((item) => item.dateAdded >= startDate.getTime());
-    console.log('Found ' + recentBookmarks.length + ' recent bookmark(s):');
-    console.log(recentBookmarks);
-  });
-}
 
-async function main() {
-  // Get the browser object
-  let browser = null;
-  try {
-    browser = (await window.browser) || window.chrome;
-  } catch (e) {
-    // Browser detection fallback
+// Listen for extension installation or updates
+chrome.runtime.onInstalled.addListener((details) => {
+  console.log('Recent Bookmarks extension installed/updated:', details.reason);
+  
+  // Set default settings on first install
+  if (details.reason === 'install') {
+    chrome.storage.sync.set({
+      theme: 'auto',
+      dateRange: 14,
+      bookmarkLimit: 200,
+    }, () => {
+      console.log('Default settings initialized');
+    });
   }
+});
 
-  // Define the browser action
-  browser.browserAction.onClicked.addListener(function (_tab) {
-    console.log('Browser action clicked!');
-    searchBookmarks();
-  });
-}
-
-// Call the main function
-main();
+// Log when the service worker starts
+console.log('Recent Bookmarks service worker loaded');

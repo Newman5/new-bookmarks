@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmarks</title>
+    <title>Recent Bookmarks</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Recent Bookmarks</h1>
+            <button id="theme-toggle" class="icon-btn" title="Toggle dark mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </header>
 
-    <h1>Recent Bookmarks</h1>
-    <ul id="bookmarks-list"></ul>
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search bookmarks..."
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="filters">
+            <label for="date-range">Show bookmarks from:</label>
+            <select id="date-range">
+                <option value="7">Last 7 days</option>
+                <option value="14" selected>Last 14 days</option>
+                <option value="30">Last 30 days</option>
+                <option value="90">Last 90 days</option>
+            </select>
+        </div>
+
+        <div id="loading" class="loading">Loading bookmarks...</div>
+        <div id="empty-state" class="empty-state" style="display: none;">
+            <p>No bookmarks found</p>
+        </div>
+
+        <ul id="bookmarks-list" class="bookmarks-list"></ul>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>

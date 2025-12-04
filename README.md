@@ -73,18 +73,8 @@ recent-bookmarks/
 ├── popup.js              # Popup logic
 ├── manifest.json         # Extension manifest
 ├── icons/                # Extension icons
-└── docs/                 # Documentation
-    ├── MODERNIZATION_STRATEGY.md
-    ├── MONETIZATION_STRATEGY.md
-    └── MVP_ROADMAP.md
+
 ```
-
-## 📖 Documentation
-
-- **[Modernization Strategy](MODERNIZATION_STRATEGY.md)** - Technical roadmap and improvements
-- **[Monetization Strategy](MONETIZATION_STRATEGY.md)** - Business model and marketing
-- **[MVP Roadmap](MVP_ROADMAP.md)** - 90-day implementation plan
-- **[Marketing Quick Start](MARKETING_QUICK_START.md)** - Launch and promotion guide
 
 ## 🗺️ Roadmap
 
@@ -105,15 +95,13 @@ recent-bookmarks/
 ### v1.1 - Enhanced Features
 
 - [ ] Advanced statistics
-- [ ] Multiple export formats
+- [ ] export in multiple formats (.md, HTML, JSON, etc.)
 
 ### v2.0 - Premium Features
 
 - [ ] Advanced analytics
 - [ ] AI-powered categorization
 - [ ] Team collaboration
-
-See [MVP_ROADMAP.md](MVP_ROADMAP.md) for detailed timeline.
 
 ## 🤝 Contributing
 
@@ -154,4 +142,4 @@ Based on:
 
 ---
 
-**Built with ❤️ for people who love to learn and reflect**
+Built with ❤️ for people who love to learn and reflect

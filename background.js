@@ -4,7 +4,7 @@
  */
 
 // Polyfill for browser namespace (Chrome compatibility)
-if (typeof browser === "undefined") {
+if (typeof browser === 'undefined') {
   globalThis.browser = chrome;
 }
 

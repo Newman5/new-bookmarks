@@ -250,19 +250,37 @@ function handleDateRangeChange(event) {
 
 // Highlight search terms in text
 function highlightText(text, query) {
-  if (!query) return escapeHtml(text);
+  const container = document.createElement('span');
   
-  const escapedText = escapeHtml(text);
-  const escapedQuery = escapeRegex(escapeHtml(query));
+  if (!query) {
+    container.textContent = text;
+    return container;
+  }
+  
+  // Escape the query for use in regex
+  const escapedQuery = escapeRegex(query);
   const regex = new RegExp(`(${escapedQuery})`, 'gi');
-  return escapedText.replace(regex, '<span class="highlight">$1</span>');
-}
-
-// Escape HTML to prevent XSS
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.textContent;
+  
+  // Split text by the search query
+  const parts = text.split(regex);
+  
+  // Create text nodes and highlight spans
+  parts.forEach((part, index) => {
+    if (part) {
+      if (index % 2 === 1) {
+        // This is a matched part - create a highlight span
+        const highlight = document.createElement('span');
+        highlight.className = 'highlight';
+        highlight.textContent = part;
+        container.appendChild(highlight);
+      } else {
+        // This is a non-matched part - create a text node
+        container.appendChild(document.createTextNode(part));
+      }
+    }
+  });
+  
+  return container;
 }
 
 // Escape regex special characters

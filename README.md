@@ -6,7 +6,7 @@
 
 > **Remember what you saved, reflect on what you learned.**
 
-A modern, cross-browser extension that helps you track, organize, and review your recent bookmarks. Perfect for monthly reflection, research workflows, and staying organized.
+A modern, cross-browser extension that helps you track, organize, and review your recent bookmarks. Perfect for monthly reflection, research workflows, and staying organized. [Read the PRIVACY.md file](privacy.md)
 
 ## 🌟 Features
 
